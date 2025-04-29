@@ -1,7 +1,5 @@
 # gilgamesh-project
 
-# gilgamesh-project
-
 ## He Who Saw the Deep  
 ### An adaptation of the Epic of Gilgamesh, Tablet I by Yahya Handulle
 

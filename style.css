@@ -1,0 +1,555 @@
+/* Base Styles */
+body {
+    margin: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100vh;
+    font-family: 'Georgia', serif;
+    background: url('images/parchment-texture.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    color: #333;
+    position: relative;
+}
+/* Titles */
+h1 {
+    font-family: 'Copperplate', fantasy;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: max-content;
+}
+
+.scene {
+    flex: 0 0 100vw;
+    height: 100%;
+    padding: 4rem;
+    box-sizing: border-box;
+    position: relative;
+    color: #3b2f2f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#title-page {
+    background: radial-gradient(circle at center, #d2b48c 60%, #a67b5b 100%),
+                url('images/parchment-texture.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #3b2f2f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 4rem;
+}
+
+/* Titles */
+h2 {
+    font-family: 'Copperplate', fantasy;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+#prologue-scene {
+    height: 100vh;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem;
+}
+
+/* Ghost background image */
+.background-ghost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Main huge centered text */
+.main-quote {
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Copperplate', fantasy;
+    font-size: 3rem;
+    text-align: center;
+    max-width: 40rem;
+    color: #3b2f2f;
+}
+@keyframes floatSlow {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-20px); }
+    75% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+/* Floating small texts */
+.corner-text.top-left,
+.floating-text,
+.center-text,
+.bottom-right-text,
+.floating-text-2,
+.floating-text-3,
+.floating-text-4,
+.far-right-quote {
+    position: absolute;
+    font-size: 1.2rem;
+    font-style: italic;
+    text-shadow: 1px 1px 2px #ece0d1;
+    color: #3b2f2f;
+    max-width: 20rem;
+    animation: floatSlow 10s ease-in-out infinite;
+}
+
+/* Position each small text OUTSIDE the main center zone */
+.corner-text.top-left {
+    top: 10%;
+    left: 5%;
+}
+
+.floating-text {
+    top: 70%;
+    left: 10%;
+}
+
+.center-text {
+    top: 10%;
+    left: 40%;
+}
+
+.bottom-right-text {
+    top: 70%;
+    right: 10%;
+}
+
+.floating-text-2 {
+    top: 75%;
+    left: 40%;
+}
+
+.floating-text-3 {
+    top: 15%;
+    left: 75%;
+}
+.floating-text-4 {
+    top: 40%;
+    left: 3%;
+}
+
+.far-right-quote {
+    top: 40%;
+    left:75%;
+    font-size: 1.4rem;
+    text-align: right;
+}
+/* Subtitle animations */
+.subtitle {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+#start-subtitle {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards, pulse 3s ease-in-out infinite;
+    animation-delay: 1s, 3s;
+}
+
+/* Audio player hidden */
+#title-audio {
+    display: none;
+}
+
+/* Footer credit */
+.footer-credit {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #1c3d73;
+    color: #ece0d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Copperplate', fantasy;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+/* Audio players */
+audio {
+    margin-top: 2rem;
+}
+
+/* Images inside scenes */
+.scene-image {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin-top: 2rem;
+}
+
+/* Optional: Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Staircase oppression text - Page 2 */
+.staircase-text-1,
+.staircase-text-2,
+.staircase-text-3,
+.staircase-text-4,
+.staircase-text-5 {
+    position: absolute;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    max-width: 30rem;
+    text-shadow: 1px 1px 2px #ece0d1;
+}
+
+/* Each text positioned lower and further right */
+.staircase-text-1 {
+    top: 5%;
+    left: 5%;
+    font-size: 2.5rem;
+    color: #3b2f2f;
+}
+
+.staircase-text-2 {
+    top: 28%;
+    left: 24%;
+    font-size: 2.1rem;
+    color: #352c2c;
+}
+
+.staircase-text-3 {
+    top: 50%;
+    left: 40%;
+    font-size: 1.7rem;
+    color: #2f2929;
+}
+
+.staircase-text-4 {
+    top: 65%;
+    left: 55%;
+    font-size: 1.5rem;
+    color: #292525;
+}
+
+.staircase-text-5 {
+    top: 80%;
+    left: 75%;
+    font-size: 1.3rem;
+    color: #231f1f;
+}
+@keyframes bullCharge {
+    0% {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg) scale(0.4);
+        opacity: 0.06;
+    }
+    42% {
+        top: 0;
+        left: 0;
+        transform: rotate(0deg) scale(0.4);
+        opacity: 0.1;
+    }
+    71% {
+        top: 30%;
+        left: 34.5%;
+        transform: rotate(10deg) scale(0.5);
+        opacity: 0.3;
+    }
+    100% {
+        top: 50%;
+        left: 69%;
+        transform: scale(0.6);
+        opacity: 1;
+    }
+}
+
+.bull-background {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    pointer-events: none;
+    animation: bullCharge 100s linear forwards;
+    z-index: 1;
+}
+
+.dust-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2; /* Above the bull, but under text */
+}
+
+/* Main pulsing quote at bottom left */
+.main-quote-pulse {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-family: 'Copperplate', fantasy;
+    font-size: 1.4rem;
+    text-align: left;
+    max-width: 28rem;
+    color: #3b2f2f;
+    animation: pulseGrow 5s ease-in-out infinite;
+}
+
+/* Top and Bottom Floating Texts */
+.creation-text-1,
+.creation-text-2,
+.creation-text-1-below,
+.creation-text-2-below  {
+    position: absolute;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #3b2f2f;
+    max-width: 25rem;
+    text-shadow: 1px 1px 2px #ece0d1;
+}
+
+/* Position each floating text carefully */
+
+/* First top text */
+.creation-text-1 {
+    top: 15%;
+    left: 35%;
+}
+
+/* First bottom text */
+.creation-text-2 {
+    top: 35%;
+    left: 65%;
+}
+.creation-text-1-below {
+    top: 40%;
+    left: 35%;
+}
+
+/* First bottom text */
+.creation-text-2-below {
+    top: 45%;
+    left: 65%;
+}
+/* Second top text */
+.creation-text-top-2 {
+    top: 20%;
+    left: 25%;
+}
+
+/* Second bottom text */
+.creation-text-bottom-2 {
+    bottom: 30%;
+    right: 25%;
+}
+
+/* Third top text */
+.creation-text-top-3 {
+    top: 30%;
+    left: 55%;
+}
+
+/* Third bottom text */
+.creation-text-bottom-3 {
+    bottom: 40%;
+    right: 5%;
+}
+
+/* Pulse animation for main quote */
+@keyframes pulseGrow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.10);
+    }
+}
+
+.enkidu-image {
+    position: absolute;
+    top: 3%; /* a little above the pulsating text */
+    left: 3%;
+    height: 73vh;
+    width: auto;
+    opacity: 0.8;
+    object-fit: contain;
+    z-index: 1; /* above the background, below the dust if you have any */
+    pointer-events: none; /* don't block clicks or anything */
+}
+
+.summon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Stretch both columns to full height */
+    height: 100vh; /* Force it to one viewport */
+    padding: 2rem;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.summon-left, .summon-right {
+    width: 100%;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #3b2f2f;
+    font-size: 1.2rem; /* Smaller text */
+    line-height: 1.4; /* More compact */
+    overflow-y: auto; /* Allow internal scrolling if it ever needed */
+    padding: 1rem;
+    text-shadow: 1px 1px 2px #ece0d1;
+}
+
+.summon-left {
+    text-align: left;
+    align-self: flex-start;
+    
+}
+
+.summon-right {
+    text-align: right;
+    align-self: flex-start;
+    margin-left: auto;
+    visibility: hidden; /* hidden but keeps layout */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+.summon-button-container {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#summon-button {
+    padding: 1.5rem 3rem;
+    font-family: 'Copperplate', fantasy;
+    font-size: 2rem; /* Slightly smaller button text */
+    letter-spacing: 2px;
+    background-color: #a67b5b;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;}
+
+#summon-button:hover {
+    background-color: #8b5a2b;
+    transform: scale(1.05); /* Slight pop on hover */
+
+}
+#endless-desire-scene {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.endless-desire-text {
+  position: absolute;
+  font-size: 3rem;
+  font-family: 'Copperplate', fantasy;
+  color: #3b2f2f;
+  white-space: nowrap;
+  animation: edge-loop 30s linear infinite;
+}
+
+/* Path along the edges of the screen */
+@keyframes edge-loop {
+    0% {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+    25% {
+      top: 0;
+      left: 100%;
+      transform: translate(-100%, 0);
+    }
+    50% {
+      top: 60%;
+      left: 100%;
+      transform: translate(-100%, 0);
+    }
+    75% {
+      top: 60%;
+      left: 0;
+      transform: translate(0, 0);
+    }
+    100% {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+  }
+  
+
+  #final-scene {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.closing-text {
+    font-family: 'Copperplate', fantasy;
+    font-size: 2.5rem;
+    color: #3b2f2f;
+    text-align: center;
+    max-width: 50rem;
+    opacity: 0;
+    transition: opacity 4s ease;
+    margin-bottom: 2rem; /* Some space between blocks */
+}
+
+
+
+

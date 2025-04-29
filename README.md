@@ -7,15 +7,16 @@
 
 ## How to View the Project
 
-To view the project, first download and unzip the full project folder onto your computer. Inside the folder, locate the file titled `index.html`. Double-click on `index.html` to open the project in your default web browser. 
+The project is now live and accessible online:  
+🔗 [Visit the website here](https://yhandulle.github.io/gilgamesh-project/)
 
-For the best experience, it is recommended to use a modern browser such as **Google Chrome**, **Safari**, or **Firefox**.
+For the best experience, please view the project on a **desktop or laptop screen**.  
+It is **not optimized for mobile devices**. Full-screen mode is highly recommended to fully experience the horizontal scroll-based storytelling format.
 
-Please ensure that the `images/` and `audio/` folders remain in the same directory as the `index.html` file. These folders are essential for full functionality, including background textures, images, and audio elements.
+Audio plays an important role in the atmosphere.  
+Please allow your browser to play sound if prompted, and use **headphones or speakers** for the best immersive experience.
 
-The project is best experienced on a **desktop or laptop computer**. **Full-screen mode** is highly recommended to allow for full immersion in the horizontal scroll-based storytelling experience. Audio is an important part of the atmosphere; if your browser requests permission to play sound, please allow it. Using headphones or external speakers will enhance the experience. 
-
-As you explore, **scroll horizontally from left to right** to progress through the story.
+Navigate through the story by **scrolling horizontally from left to right**.
 
 This project was designed to be viewed in a **quiet, darkened room** to capture the solemn, reflective mood of the ancient tale.
 
